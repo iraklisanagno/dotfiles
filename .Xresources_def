@@ -1,0 +1,52 @@
+URxvt*termName: rxvt-unicode-256color
+URxvt*xftAntialias: true
+URxvt*background: #3f3f3f
+URxvt*foreground: #dcdccc
+URxvt*cursorColor: #aaaaaa
+URxvt*colorUL: #366060
+URxvt*underlineColor: #dfaf8f
+URxvt*color0: #3f3f3f
+URxvt*color1: #cc9393
+URxvt*color2: #7f9f7f
+URxvt*color3: #d0bf8f
+URxvt*color4: #6ca0a3
+URxvt*color5: #dc8cc3
+URxvt*color6: #93e0e3
+URxvt*color7: #dcdccc
+URxvt*color8: #000000
+URxvt*color9: #dca3a3
+URxvt*color10: #bfebbf
+URxvt*color11: #f0dfaf
+URxvt*color12: #8cd0d3
+URxvt*color13: #dc8cc3
+URxvt*color14: #93e0e3
+URxvt*color15: #ffffff
+
+
+!URxvt*font: xft:Monospace:pixelsiZe=14
+!URxvt*font: xft:Droid Sans Mono for Powerline:pixelsiZe=14
+!URxvt*font: xft:Droid Sans Mono for Powerline:size=11
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=15:antialias=true:hinting=true
+URxvt*saveLines: 12000
+URxvt.letterSpace: -1
+
+URxvt*scrollBar: False
+URxvt*scrollTtyOutput: False
+URxvt*scrollTtyKeypress: True
+URxvt*secondaryScroll: True
+
+! enable tabbing and clipboard
+URxvt.perl-ext-common : tabbed,clipboard,font-size
+URxvt.tabbed.tabbar-fg: 5
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg:    14
+URxvt.tabbed.tab-bg:    0
+
+
+! Disable he Ctrl+Shift binding (ISO 14755) in urxv
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+! This is to bind Ctrl++ to increase fint size. There is a script to do this:
+! $HOME/.urxvt/ext/font-size
+! URxvt.perl-ext-common: ...,font-size
+

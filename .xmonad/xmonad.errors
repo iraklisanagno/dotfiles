@@ -1,0 +1,31 @@
+
+xmonad.hs:89:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+   |
+89 |         -- launch xloxk
+   | ^^^^^^^^
+
+xmonad.hs:302:68: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+    |
+302 |         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
+    |                                                                    ^^^^^^^^^^^^^
+
+xmonad.hs:303:51: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+    |
+303 |         , layoutHook = avoidStruts  $  layoutHook defaultConfig
+    |                                                   ^^^^^^^^^^^^^
+
+xmonad.hs:318:12: warning: [-Wdeprecations]
+    In the use of ‘defaultConfig’
+    (imported from XMonad, but defined in XMonad.Config):
+    Deprecated: "Use def (from Data.Default, and re-exported by XMonad and XMonad.Config) instead."
+    |
+318 | defaults = defaultConfig {
+    |            ^^^^^^^^^^^^^
