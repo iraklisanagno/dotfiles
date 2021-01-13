@@ -31,8 +31,10 @@ Check the `xmonad.hs` for using `language_switch.sh`
 
 `sudo vim /usr/bin/language_switch.sh`
 
-sd
-`#!/bin/bash
+and add the following:
+
+```
+#!/bin/bash
 # LICENSE: PUBLIC DOMAIN
 # switch between my layouts
 
@@ -51,4 +53,5 @@ if [[ -n "$1" ]]; then
           ;;
       esac
     
-    fi```
+    fi
+```
