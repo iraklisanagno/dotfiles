@@ -17,13 +17,15 @@ When connecting from ssh
 
 and add the following
 
-`[Desktop Entry]
+```
+[Desktop Entry]
 Name=XMonad
 Comment=Lightweight tiling window manager
 #Exec=xmonad-session
 Exec=/home/iraklis/.xmonad-start
 Icon=xmonad.png
-Type=XSession`
+Type=XSession
+```
 
 ### Set up greek keyboard
 
