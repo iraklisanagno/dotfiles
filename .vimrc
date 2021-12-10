@@ -13,6 +13,8 @@ set hidden
 set scrolloff=7
 set backspace=indent,eol,start
 
+set conceallevel=0
+
 "Needed for tmux
 "https://gist.github.com/gutoyr/4192af1aced7a1b555df06bd3781a722
 set t_ZH=[3m
@@ -23,7 +25,10 @@ set tw=80
 "set colorcolumn=80
 
 set t_Co=256
+set encoding=UTF-8
 
+let mapleader = " " "space
+"nnoremap <silent> 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
@@ -36,6 +41,7 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'ycm-core/YouCompleteMe'
 "First clone for NERDTree git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 Plug 'joom/vim-commentary'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 "Required plug ins for snippets (enigne and snippets)
@@ -51,12 +57,20 @@ Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'voldikss/vim-floaterm'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 "We need this line in order to see mispelled words
 "https://github.com/morhetz/gruvbox/issues/175
-let g:gruvbox_italic=1
+"let g:gruvbox_italic=1
 let g:gruvbox_guisp_fallback = "bg"
+
+" " Close window if NERDTree is the last one
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" " Map to open current file in NERDTree and set size
+nnoremap <leader>f :NERDTreeFind<bar> :vertical resize 45<CR>
+"let g:webdevicons_enable = 0
+let g:airline_powerline_fonts = 1
 
 
 "colorscheme dracula
@@ -105,8 +119,6 @@ map sk <C-w>k
 map sj <C-w>j
 map sl <C-w>l
 
-let mapleader = " " "space
-"nnoremap <silent> 
 
 
 
@@ -193,5 +205,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 
 let g:floaterm_keymap_new    = '<Leader>ft'
 let g:floaterm_keymap_toggle = '<Leader>t'
+let g:floaterm_keymap_toggle = '<Leader>t'
+vnoremap  <Leader>s :'<,'>FloatermSend<Return>
 
 

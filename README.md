@@ -57,3 +57,6 @@ if [[ -n "$1" ]]; then
     
     fi
 ```
+
+For Dropbox (if it does not synchronize) use this link:
+https://askubuntu.com/questions/1166543/drop-box-is-not-syncing-in-ubuntu-18-04-3-lts
