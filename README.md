@@ -4,7 +4,7 @@
 
 **VIM/NVIM**  
 ```
-sudo apt-get install git vim vim-gtk3 nvim
+sudo apt install git vim vim-gtk3 nvim
 ```
 When connecting from ssh
 `ssh -XY myhost`
@@ -19,17 +19,17 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 
 **tmux**  
 ```
-sudo apt-get install tmux
+sudo apt install tmux
 ```
 
 **Xmonad, xmobar, and trayer**  
 ```
-sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar trayer
+sudo apt install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar trayer
 ```
 
 **feh and xscreensaver**  
 ```
-sudo apt-get install feh xscreensaver
+sudo apt install feh xscreensaver
 ```
 
 **Picom**  
@@ -72,7 +72,7 @@ Need to add `eval "$(starship init bash)"` at the end of `~/.bashrc`. It should 
 
 **Other packages**  
 ```
-sudo apt-get install dmenu rofi firefox brave
+sudo apt install dmenu rofi firefox brave
 ```
 
 
