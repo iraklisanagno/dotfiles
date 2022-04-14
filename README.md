@@ -2,58 +2,78 @@
 
 ## Prerequisites - Packages
 
-**VIM/NVIM**
-`sudo apt-get install git vim vim-gtk3 nvim`
+**VIM/NVIM**  
+```
+sudo apt-get install git vim vim-gtk3 nvim
+```
 When connecting from ssh
 `ssh -XY myhost`
 
-*Install Vim Plug*
-`curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
- [more info](https://github.com/junegunn/vim-plug)]
+*Install Vim Plug*  
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+[more info](https://github.com/junegunn/vim-plug)
 
 Reload .vimrc and `:PlugInstall` to install plugins.
 
-**tmux**
-`sudo apt-get install tmux`
+**tmux**  
+```
+sudo apt-get install tmux
+```
 
-**Xmonad, xmobar, and trayer**
-`sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar trayer`
+**Xmonad, xmobar, and trayer**  
+```
+sudo apt-get install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar trayer
+```
 
-**feh and xscreensaver**
-`sudo apt-get install feh xscreensaver`
+**feh and xscreensaver**  
+```
+sudo apt-get install feh xscreensaver
+```
 
-**Picom**
-More info in this [link](https://github.com/yshui/picom/). In my Ubuntu, picom is installed in `/usr/local/bin/`
-
-
-**Alacritty**
-`source fonts_download.sh`
-`sudo add-apt-repository ppa:aslatter/ppa`
-`sudo apt update`
-`sudo apt install alacritty`
-
-Remove alacritty
-`sudo apt remove --auto-remove alacritty`
-`sudo add-apt-repository --remove ppa:aslatter/ppa`
-`sudo apt update`
-
-**fish shell**
-`sudo apt-add-repository ppa:fish-shell/release-3`
-`sudo apt update`
-`sudo apt install fish`
-`chsh -s /usr/local/bin/fish`
-More info [here](https://github.com/fish-shell/fish-shell)
+**Picom**  
+More info in this [link](https://github.com/yshui/picom/). In my Ubuntu, picom is installed in `/usr/local/bin/`  
 
 
-**starship**
-`sudo apt update`
-`sudo apt install snapd`
-`sudo snap install starship`
-Need to add `eval "$(starship init bash)"` at the end of `~/.bashrc`. It should be there in my files.
+**Alacritty**  
+```
+source fonts_download.sh
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt update
+sudo apt install alacritty
+```
+
+Remove alacritty  
+```
+sudo apt remove --auto-remove alacritty
+sudo add-apt-repository --remove ppa:aslatter/ppa
+sudo apt update
+```
+
+**fish shell**  
+```
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
+chsh -s /usr/local/bin/fish
+```
+More info [here](https://github.com/fish-shell/fish-shell)  
 
 
-**Other packages**
-`sudo apt-get install dmenu rofi firefox brave `
+**starship**  
+```
+sudo apt update
+sudo apt install snapd
+sudo snap install starship
+```
+Need to add `eval "$(starship init bash)"` at the end of `~/.bashrc`. It should be there in my files.  
+
+
+**Other packages**  
+```
+sudo apt-get install dmenu rofi firefox brave
+```
 
 
 ## Set up Xmonad

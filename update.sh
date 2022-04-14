@@ -19,6 +19,10 @@ cp ${HOME}/.config/nvim/init.vim ./config/nvim/init.vim
 echo "Updating tmux..."
 cp ${HOME}/.tmux.conf  ./tmux.conf
 
+echo "Update Xresources..."
+cp .Xresources ./Xresources
+
+
 echo "Updating Xmonad..."
 if [ ! -d "xmonad" ]; then
   echo "Creating xmonad folder"
@@ -82,4 +86,4 @@ chmod +x xmonad-start
 # cp -r ${HOME}/Pictures/wallpapers ./wallpapers
 
 # TODO
-# Tmux
+# vscode for snippets
