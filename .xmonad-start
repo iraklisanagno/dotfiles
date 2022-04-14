@@ -1,9 +1,0 @@
-#!/bin/bash
-
-feh --bg-scale /home/iraklis/Pictures/portal-left.jpg --bg-scale /home/iraklis/Pictures/portal-right.jpg &
-xrdb -load .Xresources_def
-dropbox start & 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 8 --transparent true --tint 0x000000 --height 17 --alpha 150 &
-xscreensaver -no-splash &
-exec xmonad
-
