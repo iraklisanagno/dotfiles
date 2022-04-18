@@ -20,7 +20,7 @@ echo "Updating tmux..."
 cp ${HOME}/.tmux.conf  ./tmux.conf
 
 echo "Update Xresources..."
-cp .Xresources ./Xresources
+cp ${HOME}/.Xresources ./Xresources
 
 
 echo "Updating Xmonad..."
@@ -62,7 +62,7 @@ if [ ! -d "$CONFIG/alacritty" ]; then
 fi
 cp ${HOME}/.config/alacritty/alacritty.yml ./config/alacritty/alacritty.yml
 
-echo "Update fish shell..."
+echo "Updating fish shell..."
 if [ ! -d "$CONFIG/fish" ]; then
   echo "Creating config/fish folder"
   mkdir ${CONFIG}/fish
@@ -71,7 +71,7 @@ cp ${HOME}/.config/fish/config.fish ./config/fish/config.fish
 cp ${HOME}/.config/fish/fish_variables ./config/fish/fish_variables
 
 
-echo "Update starship..."
+echo "Updating starship..."
 cp ${HOME}/.config/starship.toml ./config/starship.toml
 
 echo "Updating start-up script..."

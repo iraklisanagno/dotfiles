@@ -72,7 +72,7 @@ Need to add `eval "$(starship init bash)"` at the end of `~/.bashrc`. It should 
 
 **Other packages**  
 ```
-sudo apt install dmenu rofi firefox brave
+sudo apt install dmenu rofi firefox calcurse brave
 ```
 
 
