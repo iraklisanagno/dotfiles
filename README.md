@@ -27,13 +27,14 @@ sudo apt install tmux
 sudo apt install xmonad libghc-xmonad-dev libghc-xmonad-contrib-dev xmobar trayer
 ```
 
-**feh and xscreensaver**  
+**feh, xscreensaver, and xrandr**  
 ```
-sudo apt install feh xscreensaver
+sudo apt install feh xscreensaver x11-xserver-utils
 ```
 
 **Picom**  
 More info in this [link](https://github.com/yshui/picom/). In my Ubuntu, picom is installed in `/usr/local/bin/`  
+For Arch Linux, check this [link](https://github.com/jonaburg/picom) based on DTOS.
 
 
 **Alacritty**  

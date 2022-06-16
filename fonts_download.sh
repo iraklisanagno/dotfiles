@@ -10,6 +10,13 @@
 echo "[-] Download fonts [-]"
 echo "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+
+if [ ! -d "${HOME}/.local/shared/fonts" ]; then
+  echo "Creating .local/shared/fonts folder..."
+  mkdir -p ${HOME}/.local/shared/fonts
+fi
+
+
 unzip FiraCode.zip -d ~/.local/share/fonts
 fc-cache -fv
 echo "done!"

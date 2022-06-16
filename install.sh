@@ -1,5 +1,5 @@
 #!/bin/bash
-CONFIG="config"
+CONFIG="{HOME}/.config"
 
 if [ ! -d "$CONFIG" ]; then
   echo "Creating config folder..."
@@ -25,16 +25,16 @@ cp ./Xresources ${HOME}/.Xresources
 
 
 echo "Installing Xmonad..."
-if [ ! -d "xmonad" ]; then
+if [ ! -d "${HOME}/.xmonad" ]; then
   echo "Creating xmonad folder"
-  mkdir xmonad
+  mkdir -p ${HOME}/.xmonad
 fi
 cp ./xmonad/xmonad.hs ${HOME}/.xmonad/xmonad.hs 
 
 echo "Installing Xmobar..."
-if [ ! -d "xmonad" ]; then
+if [ ! -d "${HOME}/.xmonad" ]; then
   echo "Creating xmonad folder"
-  mkdir xmonad
+  mkdir -p ${HOME}/.xmonad
 fi
 cp ./xmonad/xmobarrc ${HOME}/.xmonad/xmobarrc 
 
