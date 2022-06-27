@@ -18,6 +18,8 @@ import XMonad.Layout.Grid
 import XMonad.Layout.Spacing
 import XMonad.Layout.LayoutModifier(ModifiedLayout)
 
+
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
  
@@ -174,6 +176,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Restart xmonad
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
+
+
+    -- Control sound volume
+    , ((modm              , xK_Up     ), spawn "pactl set-sink-volume @DEFAULT_SINK@ +2.5%")
+    , ((modm              , xK_Down     ), spawn "pactl set-sink-volume @DEFAULT_SINK@ -2.5%")
+    , ((modm              , xK_m     ), spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+
+    
     ]
     ++
 
