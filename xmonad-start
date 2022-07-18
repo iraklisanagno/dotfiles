@@ -5,8 +5,8 @@
 source ~/.config/feh/set_background.sh
 picom &
 xrdb -load .Xresources
-dropbox start & 
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent false --tint 0x000000 --height 17 --alpha 10 &
+dropbox start & 
 xscreensaver -no-splash &
 #xrandr --output DP-1 --primary --left-of DVI-D-1
 #xrandr --output HDMI-1 --rotate right

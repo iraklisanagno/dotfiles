@@ -331,7 +331,7 @@ main = do
     xmproc <- spawnPipe "/usr/bin/xmobar /home/iraklis/.xmonad/xmobarrc"
     xmonad $ docks defaults
         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
-        , layoutHook = spacingRaw False (Border 0 10 10 10) True (Border 10 10 10 10) True $ avoidStruts  $  layoutHook defaultConfig
+        , layoutHook = spacingRaw False (Border 0 3 3 3) True (Border 3 3 3 3) True $ avoidStruts  $  layoutHook defaultConfig
         -- , layoutHook = avoidStruts  $  layoutHook defaultConfig
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
