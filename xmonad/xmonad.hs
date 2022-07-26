@@ -101,14 +101,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Script for language change
     , ((mod1Mask,             xK_Shift_L   ), spawn "/usr/bin/language_switch.sh")
-	-- launch xloxk
+    -- launch xloxk
 
     , ((modm,             xK_b   ), spawn "~/.config/feh/set_background.sh")
 
     -- , ((mod1Mask,               xK_p     ), spawn "cinnamon-screensaver-command -a")
     , ((mod1Mask,               xK_p     ), spawn "xscreensaver-command -lock")
     
-     -- launch urxvt
+    -- launch urxvt
     , ((mod1Mask,               xK_Return     ), spawn $XMonad.terminal conf)
     
     -- launch file manager
@@ -120,7 +120,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_Return     ), spawn "alacritty")
     --, ((mod1Mask, xK_F4     ), kill)
 
-     -- Rotate through the available layout algorithms
+    -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
 
     --  Reset the layouts on the current workspace to default
@@ -300,7 +300,7 @@ myFocusFollowsMouse = True
 --
 -- By default, do nothing.
 myStartupHook = do 
-        ewmhDesktopsStartup 
+        -- ewmhDesktopsStartup 
         return ()
  
 ------------------------------------------------------------------------
@@ -312,8 +312,8 @@ myStartupHook = do
 --         -- xmproc <- spawnPipe "/home/iraklis/.cabal/bin/xmobar /home/iraklis/.xmobarrc"
 --         xmproc <- spawnPipe "/usr/bin/xmobar /home/iraklis/.xmobarrc"
 --         xmonad $ defaults
---         { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
---          , layoutHook = avoidStruts  $  layoutHook defaultConfig
+--         { manageHook = manageDocks <+> myManageHook <+> manageHook def
+--          , layoutHook = avoidStruts  $  layoutHook def
 --          , logHook = dynamicLogWithPP $ xmobarPP
 --                  { ppOutput = hPutStrLn xmproc
 --                   ,ppTitle = xmobarColor "#0077ff" "" . shorten 50
@@ -330,16 +330,16 @@ myStartupHook = do
 main = do   
     xmproc <- spawnPipe "/usr/bin/xmobar /home/iraklis/.xmonad/xmobarrc"
     xmonad $ docks defaults
-        { manageHook = manageDocks <+> myManageHook <+> manageHook defaultConfig
-        , layoutHook = spacingRaw False (Border 0 3 3 3) True (Border 3 3 3 3) True $ avoidStruts  $  layoutHook defaultConfig
-        -- , layoutHook = avoidStruts  $  layoutHook defaultConfig
+        { manageHook = manageDocks <+> myManageHook <+> manageHook def
+        , layoutHook = spacingRaw False (Border 0 3 3 3) True (Border 3 3 3 3) True $ avoidStruts  $  layoutHook def
+        -- , layoutHook = avoidStruts  $  layoutHook def
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "#0077ff" "" . shorten 50
                         }
-        , modMask = mod4Mask     -- Rebind Mod to the Windows key
+        , modMask  = mod4Mask     -- Rebind Mod to the Windows key
         , terminal = myTerminal
- 	    , keys     = myKeys
+        , keys     = myKeys
         } 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will 
@@ -347,7 +347,7 @@ main = do
 -- 
 -- No need to modify this.
 --
-defaults = defaultConfig {
+defaults = def {
       -- simple stuff
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
