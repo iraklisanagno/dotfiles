@@ -31,7 +31,7 @@ myTerminal      = "alacritty"
 --myTerminal      = "konsole" 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 1 
+myBorderWidth   = 3 
  
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -73,7 +73,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 -- myNormalBorderColor  = "#d5c4a1"
 myNormalBorderColor  = "#282828"
 --myFocusedBorderColor = "#0000ff"
-myFocusedBorderColor = "#83a598"
+myFocusedBorderColor = "#fabd2f"
  
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -90,7 +90,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch dmenu
     -- , ((mod1Mask,               xK_F2     ), spawn "dmenu_run")
-    , ((mod1Mask,               xK_F2     ), spawn "rofi -show drun")
+    , ((mod1Mask,               xK_F2     ), spawn "rofi -show drun -show-icons")
 
     , ((mod1Mask,               xK_F3     ), spawn "rofi -show ssh")
     
@@ -328,7 +328,7 @@ myStartupHook = do
 -- mySpacing i = spacingRaw False (Border 0 i 0 i) True (Border i 0 i 0) True
 
 main = do   
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/iraklis/.xmonad/xmobarrc"
+    xmproc <- spawnPipe "xmobar $HOME/.xmonad/xmobarrc"
     xmonad $ docks defaults
         { manageHook = manageDocks <+> myManageHook <+> manageHook def
         , layoutHook = spacingRaw False (Border 0 3 3 3) True (Border 3 3 3 3) True $ avoidStruts  $  layoutHook def

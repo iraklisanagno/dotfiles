@@ -19,6 +19,7 @@ scrolling:
 
 font:
   normal:
+    # family: "Mononoki Nerd Font"
     family: "FiraCode Nerd Font Mono"
     style: Regular
   bold:
